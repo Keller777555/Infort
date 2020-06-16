@@ -1,0 +1,273 @@
+/*Изначально у всех объектов 
+не будет отступов*/
+*{
+	padding: 0;
+	margin: 0;
+}
+/*Задание телу страницы ширины и высоты*/
+body{
+	width: 100%;
+	height: auto;
+}
+/*Размер шапки и блока, который будет ездить по сайту, внутри него, размер картинки, при наведении тоже,
+размер кнопок и также при наведении на них, задание размера между кнопками
+и цвета текста внутри них*/
+header{
+	width: 100%;
+	height: 404px;
+	background: url("../images/Man.jpg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+.hat{
+	width: 100%;
+	height: 111px;
+	background-color: rgba(177, 177, 177, 0.35);
+	display: flex;
+	padding-left: 22px;
+	align-items: center;
+	position: fixed;
+}
+img{
+	width: 161px;
+	height: 90px;
+	transition: .6s;
+	border-radius: 4px;
+}
+button{
+	width: 150px;
+	height: 45px;
+	left: 242px;
+	top: 33px;
+	background-color: rgba(177, 177, 177, 0.35);
+	text-align: center;
+	border-radius: 4px;
+	border: solid 0;
+	transition: .6s;
+}
+.buttons{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.buttons-1{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.text{
+	color: #000;
+}
+/*Анимации при наведении на логотип и кнопки*/
+img:hover{
+	width: 164px;
+	height: 93px;
+	box-shadow: 0 0 3px #FF0000,
+				0 0 13px #FF0000,
+				0 0 27px #FF0000,
+				0 0 55px #FF0000;
+	transition: .6s;
+}
+button:hover{
+	width: 160px;
+	height: 55px;
+	box-shadow: 0 0 10px #FFFFFF,
+				0 0 25px #FFFFFF,
+				0 0 50px #FFFFFF,
+				0 0 200px #FFFFFF;
+	transition: .6s;
+}
+/*Задание секциям размеров, помещение в секции картинки
+размер, положение и шрифт текста в секциях, также
+задание списку положения и размера шрифта текста*/
+.section{
+	width: 100%;
+	height: auto;
+}
+.img1{
+	width: 100%;
+	height: 404px;
+	background: url("../images/People.jpg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+.img2{
+	width: 100%;
+	height: 404px;
+	background: url("../images/Code.jpg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+.img3{
+	width: 100%;
+	height: 404px;
+	background: url("../images/Nightcity.jpg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+.one{
+	display: flex;
+	flex-direction: column;
+}
+.Name{
+	top: 18px;
+	text-align: center;
+	font-size: 24px;
+	line-height: 42px;
+}
+.info{
+	margin-top: 62px;
+	display: flex;
+	justify-content: space-around;
+}
+.text1{
+	text-align: left;
+	font-size: 28px;
+	line-height: 47px; 
+}
+.text2{
+	text-align: center;
+	font-size: 28px;
+	line-height: 47px;
+}
+.text3{
+	text-align: right;
+	font-size: 28px;
+	line-height: 47px;
+}
+.second-page{
+	text-decoration: none;
+}
+.link{
+	color: #000;
+	font-size: 20px;
+	text-align: right;
+	margin-top: 18px;
+	margin-right: 16px;
+	transition: .6s;
+}
+.text4{
+	top: 18px;
+	text-align: center;
+	font-size: 33px;
+	line-height: 42px;
+}
+.text-4{
+	top: 18px;
+	text-align: center;
+	font-size: 36px;
+	line-height: 42px;
+}
+.Names{
+	display: flex;
+	justify-content: space-around;
+}
+.text5{
+	margin-top: 66px;
+	text-align: center;
+	font-size: 24px;
+	line-height: 42px;
+}
+ul{
+	font-size: 28px;
+	line-height: 47px;
+	text-align: center; 
+}
+/*Анимация при наведении на кнопку "Узнать больше"*/
+.link:hover{
+	font-size: 24px;
+	color: #0000FF;
+	transition: .6s;
+}
+/*Задание последней секции размера и 
+цвета заднего фона, меняем размер, положение 
+и отступ у текста*/
+footer{
+	width: 100%;
+	height: 313px;
+	background: rgba(150, 124, 255, 0.65);
+}
+.text7{
+	margin-top: 80px;
+	text-align: center;
+	font-size: 28px;
+	line-height: 47px;
+}
+/*Параметры, которые будут принимать текст и 
+блок при ширине меньше 1120px*/
+@media(max-width: 1120px){
+	.text1{
+		text-align: center;
+	}
+	.text2{
+		margin-top: 20px;
+	}
+	.text3{
+		margin-top: 20px;
+		text-align: center;
+	}
+	.info{
+		margin-top: 30px;
+		flex-direction: column;
+	}
+}
+/*Параметры, которые будут принимать кнопки, 
+блоки и текст при ширине меньше 990px*/
+@media(max-width: 990px){
+	.buttons{
+		flex-direction: column;
+	}
+	button{
+		margin-top: 10px;
+	}
+	.hat{
+		height: 141px;
+	}
+	.Names{
+		flex-direction: column;
+	}
+	.text5{
+		margin-top: 10px;
+	}
+}
+/*Параметры картинки при ширине
+меньше 590px*/
+@media(max-width: 590px){
+	img{
+		width: 141px;
+		height: 80px;
+	}
+	img:hover{
+		width: 144px;
+		height: 83px;
+	}
+}
+/*Параметры, которые будут принимать блок,
+кнопки и картинка при ширине меньше 570px*/
+@media(max-width: 570px){
+	.hat{
+		height: 111px;
+	}
+	button{
+		width: 135px;
+		height: 30px;
+	}
+	button:hover{
+		width: 145px;
+		height: 40px;
+	}
+	img{
+		width: 101px;
+		height: 60px;
+	}
+	img:hover{
+		width: 104px;
+		height: 63px;
+	}
+}
